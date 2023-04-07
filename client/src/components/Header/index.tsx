@@ -1,10 +1,15 @@
 import styles from "./Header.module.css";
+import { RxHamburgerMenu } from 'react-icons/rx'
 import logo from '../../assets/logo.png'
+import { useState } from "react";
+import { Menu } from "../Menu";
 
 export function Header() {
+  const [isTrue, setIstrue] = useState(false)
+
   return (
-    <div className={styles.container}>
-        <img src={logo} width={140} alt="logo" />
+    <div className={styles.containerHeader}>
+      <img src={logo} width={140} alt="logo" />
       <div className={styles.navContainer}>
         <nav className={styles.nav}>
           <ul className={styles.ul}>
@@ -24,6 +29,9 @@ export function Header() {
             </li>
           </ul>
         </nav>
+
+        <RxHamburgerMenu onClick={() => setIstrue(prev => !prev)} className={styles.responsive} />
+        <Menu isOn={isTrue} />
       </div>
     </div>
   );
