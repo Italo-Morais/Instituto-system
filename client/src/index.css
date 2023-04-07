@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 700;
+
+  --blue: #1954FE;
+  --ocean: #1782E6;
+  --aqua: #26CEFC;
+  --bright: #17E6DB;
+  --green: #19FEB2;
+}
+
+
