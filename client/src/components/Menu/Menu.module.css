@@ -1,0 +1,35 @@
+.navContainer {
+    width: 100vw;
+    height: calc(100vh - 12.6rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: gray;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 12.6rem;
+}
+
+.navFalse {
+    display: none;
+}
+
+.ulList {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.ulList li {
+    list-style: none;
+}
+
+@media (min-width: 768px) {
+    .navContainer {
+        display: none;
+    }
+}
