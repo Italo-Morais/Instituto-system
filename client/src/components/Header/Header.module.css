@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  max-width: 100%;
+  min-height: 12.6rem;
+  background: linear-gradient(90deg, var(--blue), var(--green), var(--ocean));
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 3.4rem;
+  font-size: 1.4rem;
+  background-size: 500% 100%;
+  animation: degrade-animado 3s infinite alternate;
+}
+
+.ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  align-items: center;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 400ms;
+}
+
+a:hover {
+  color: orangered;
+  transform: scalex(90%);
+}
+
+.buttonContact {
+  padding: .6rem;
+  border: none;
+  border-radius: .4rem;
+  background: orangered;
+  color: white;
+  transition: 800ms;
+  font-size: 1.6rem;
+}
+
+.buttonContact:hover {
+  cursor: pointer;
+  opacity: 90%;
+  color: #121214;
+  transform: scalex(90%);
+  font-weight: bold;
+}
+
+@keyframes degrade-animado {
+  0%{
+    background-position-x: 0%;
+  }
+  100%{
+    background-position: 100%;
+  }
+}
