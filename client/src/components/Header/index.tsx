@@ -1,11 +1,13 @@
 import styles from "./Header.module.css";
 import { RxHamburgerMenu } from 'react-icons/rx'
+import menuOpen from '../../assets/menu.svg'
+import menuClose from '../../assets/close.svg'
 import logo from '../../assets/logo.png'
 import { useState } from "react";
 import { Menu } from "../Menu";
 
 export function Header() {
-  const [isTrue, setIstrue] = useState(false)
+  const [toggle, setToggle] = useState<boolean>(false)
 
   return (
     <div className={styles.containerHeader}>
@@ -30,8 +32,9 @@ export function Header() {
           </ul>
         </nav>
 
-        <RxHamburgerMenu onClick={() => setIstrue(prev => !prev)} className={styles.responsive} />
-        <Menu isOn={isTrue} />
+
+        <img src={toggle ? menuClose: menuOpen} onClick={() => setToggle(prev => !prev)} className={styles.responsive}  alt="" />
+        <Menu isToggle={toggle} />
       </div>
     </div>
   );

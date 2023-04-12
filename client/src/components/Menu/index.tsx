@@ -1,14 +1,12 @@
 import styles from './Menu.module.css'
 
 interface MenuProps {
-    isOn: boolean;
+    isToggle: boolean;
 }
 
-export function Menu({ isOn }: MenuProps) {
-    console.log(isOn);
-
+export function Menu({ isToggle }: MenuProps) {
     return (
-        <nav className={isOn ? styles.navContainer : styles.navFalse}>
+        <nav className={isToggle ? styles.navContainer : styles.navFalse}>
             <ul className={styles.ulList}>
                 <li>
                     <a href="#"> SOBRE </a>
